@@ -1,0 +1,146 @@
+.card {
+  border: 1px solid hsl(0, 0%, 80%);
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  max-width: 250px;
+  display: inline-block;
+
+}
+
+.card .card-image {
+  max-width: 60%;
+  height: auto;
+  border-radius: 50%;
+  /* makes image pic - of circular shape */
+  margin-bottom: 10px;
+  /* Remove background if you don't want it behind the image */
+  /* background: rgb(255, 0, 21); */
+  /* --- ADD THIS FOR A RED BORDER --- */
+  border: 1px solid rgb(0, 255, 94);
+  /* 5px thick, solid, red border */
+  /* Optional: Add a shadow to the image */
+  box-shadow: 0 10px 10px rgba(250, 24, 3, 0.2);
+}
+
+
+.card .card-title {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  color: hsl(0, 0%, 20%)
+}
+
+.card .card-text {
+  font-family: Arial, sans-serif;
+  color: hsl(0, 0, 30%)
+}
+
+.student {
+  max-width: 60%;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  /* 200% */
+  padding: 10px;
+  border: 10px solid hsla(0, 0%, 50%, 0.8);
+  /*hsla(0, 0%, lightness%,transparency)*/
+  background-color: rgb(251, 255, 0);
+  border-radius: 10%;
+  display: inline-block
+}
+
+.student p {
+  margin: 0;
+}
+
+.list-group {
+  min-width: 210px;
+  background-color: hsl(86, 100%, 80%);
+  border: 2px solid;
+  border-radius: 10%;
+  display: inline-block;
+  padding: 40px;
+}
+
+.list-category {
+
+  font-size: 2.5em;
+  font-weight: bold;
+  color: hsl(243, 74%, 50%);
+  margin-bottom: 10px;
+  text-align: center;
+  border: 3px solid;
+  border-radius: 20%;
+  background-color: hsl(180, 100%, 50%);
+
+}
+
+.list-items li {
+  font-size: 1em;
+  list-style: none;
+  color: hsl(189, 87%, 21%);
+  text-align: center;
+  margin: 0;
+
+}
+
+.list-items li:hover{
+
+    color: hsl(0, 0%, 45%);
+    cursor:pointer;
+}
+
+.welcome-message{
+  font-size: 2.5em;
+  background-color: hsl(160, 100%, 75%);
+  color: rgb(117, 12, 12);
+  padding:10px;
+  border-radius: 5px;
+  margin:5px;
+}
+
+.login-message{
+  font-size: 2.5em;
+  background-color: hsl(160, 100%, 75%);
+  color: rgb(117, 12, 12);
+  padding:10px;
+  border-radius: 5px;
+  margin:5px;
+}
+
+.counter-container{
+  text-align: center;
+  margin:10px;
+  font-family: Arial,  sans-serif;
+  border:2px solid hsl(240,100%,50%);
+  border-color: blue;
+  border-radius:5px;
+  background-color: hsl(10, 100%, 80%);
+}
+.counter-display{
+  text-align: center;
+  font-size:2em;
+  margin:10px;
+  color:hsl(240,100%,50%);
+}
+.counter-button{
+  width:150px;
+  height:50px;
+  font-weight: bold;
+  font-size:1.5em;
+  padding:5px 5px;
+  background-color:hsl(200,100%,50%);
+  color:white;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+  margin: 0px 20px; /* 0-20px left-right margin */
+  margin-top: 2px;
+  margin-bottom: 15px;
+}
+
+.counter-button:hover{
+  background-color:hsl(200,100%,40%);
+}

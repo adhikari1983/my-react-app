@@ -1,0 +1,43 @@
+The difference in capitalization—PascalCase for components vs. camelCase for logic—is a 
+crucial naming convention that tells everyone, including React itself, what the file is supposed to do.
+
+1. Why Components are PascalCase (Header.jsx)
+React components (the files that return JSX/UI) must start with a capital letter (PascalCase) for 
+two main reasons:
+A. React's Requirement
+                      React needs to distinguish your custom components from standard HTML elements.
+e.g. <div>, <span>, <p>: Lowercase tags are treated as standard HTML elements.
+e.g  <Header>, <Food>, <Student>: Capitalized tags are treated as React Components.
+
+If you were to name your file header.jsx and try to use it as <header>, React would treat it like the standard HTML <header> tag, and your component wouldn't render correctly.
+
+B. JavaScript Convention
+                        In JavaScript, PascalCase is the standard convention for defining Classes and Constructors. 
+Since React components (even functional ones) represent a kind of structured, reusable "building block," 
+they follow this class-like naming convention.
+
+
+2. Why Logic/Utility Files are camelCase (data.js)
+Logic, utility, and helper files are generally named using camelCase (starting with a lowercase letter) 
+because they typically export:
+A. Simple Data Variables or Arrays
+The file data.js mainly exports variables (like studentData or navigationLinks). In JavaScript, it's standard 
+practice to name variables and constants using camelCase.
+                                                         Example: const studentData = [...]
+
+B. Utility Functions
+The file helpers.js mainly exports non-UI-related functions (like calculateBMI or formatDate). Functions in JavaScript are almost always named using camelCase.
+                                    Example: export function calculateGrade(score) { ... }
+
+These files are not React components, so they do not return JSX, and therefore they do not follow the component naming rule.
+
+Naming Summary
+
+File Type                                           Casing             Example           Purpose Signal
+React Component (Returns JSX)                      PascalCase           Student.jsx       "I am a reusable UI element."
+
+Logic/Utility File (Returns Data/Functions)        camelCase            helpers.js        "I contain standard JavaScript logic."
+
+Folder                                             kebab-case           first-class/       "I am a directory."
+
+By sticking to these conventions, any developer can immediately know the role of a file just by looking at the first letter of its name.
