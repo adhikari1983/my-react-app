@@ -4,14 +4,6 @@ function Header() {
         <header>
             <h1 style={{ backgroundColor: "gray" }}>session 1 begins - Introduction</h1>
 
-            <h1>React Introduction</h1>
-            <b>
-                React is a javscript library not the framework that's used to easily build and
-                arrange user interfaces for web application.<br/>
-                React focuses on building a web application using these thing called component.
-                A component is a self contained sction of that code that function as function as
-                a reusable building blocks.
-            </b>
             <nav>
                 <ul style={{
                     listStyle: 'none', // Removes the bullet points
@@ -26,6 +18,14 @@ function Header() {
                 </ul>
                 <hr></hr>
             </nav>
+            <h1>React Introduction</h1>
+            <b>
+                React is a javscript library not the framework that's used to easily build and
+                arrange user interfaces for web application.<br/>
+                React focuses on building a web application using these thing called component.
+                A component is a self contained sction of that code that function as function as
+                a reusable building blocks.
+            </b>
         </header>
     );
 

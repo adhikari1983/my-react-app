@@ -1,0 +1,96 @@
+                +-----------------------------+
+                |       index.html (root)     |
+                +--------------+--------------+
+                               |
+                               v
+                +-----------------------------+
+                |         main.jsx            |
+                |  ------------------------   |
+                |  Wraps <App /> inside       |
+                |  <BrowserRouter>            |
+                +--------------+--------------+
+                               |
+                               v
+                +-----------------------------+
+                |          App.jsx            |
+                |-----------------------------|
+                | import Navbar               |
+                | import Routes, Route        |
+                |                             |
+                |  <Navbar />                 |
+                |  <Routes>                   |
+                |    <Route path="/" ... />   |
+                |    <Route path="/card" ...> |
+                |    <Route path="/props" ...>|
+                |    ... etc ...              |
+                |  </Routes>                  |
+                +--------------+--------------+
+                               |
+         +---------------------+----------------------+
+         |                                            |
+         v                                            v
++-----------------------+             +----------------------------------+
+|     Navbar.jsx        |             |  Different Component Files       |
+|-----------------------|             |----------------------------------|
+| import { Link }       |             | Card.jsx, PropsDemo.jsx, etc.    |
+| from 'react-router-dom'              | Each one returns its UI          |
+|                                   | for that route                     |
+| <nav>                             |                                   |
+|   <Link to="/">Home</Link>        |                                   |
+|   <Link to="/card">Card</Link>    |                                   |
+|   ... etc ...                     |                                   |
+| </nav>                            |                                   |
++-----------------------------------+----------------------------------+
+
+
+🧩 Step-by-Step Data & Flow Explanation
+
+
+1. main.jsx
+- It wraps <App /> inside <BrowserRouter>.
+- That’s what activates all routing features in your app.
+- Without it, <Link> and <Route> won’t work.
+
+
+
+
+2. App.jsx
+- Think of this as the central router and layout manager.
+- It imports <Navbar /> and all route components (Card, PropsDemo, etc.).
+- It renders two major sections:
+       <Navbar /> → always visible.
+       <Routes> → changes dynamically based on the current URL.
+
+
+Navbar.jsx
+- Displays navigation links using <Link> from react-router-dom.
+- Each <Link> updates the URL (e.g. /props, /card).
+- React Router listens to that URL change and updates which component gets rendered.
+
+When you click a Link
+- Example: Clicking Card
+                        - URL becomes /card
+                        - React Router finds a matching <Route path="/card" ...> in App.jsx
+                        - It then renders <Card /> component in the content area (below the navbar).
+
+
+
+
+
+
+
+🔁 In Short:
+ComponentPurposeExample Responsibilitymain.jsxWraps the entire app in <BrowserRouter>Enables routing globallyApp.jsxLayout + route mappingDecides what to show whenNavbar.jsxNavigation menu (with <Link>)Lets user move between routesEach Component (Card, PropsDemo, etc.)Displays content for that route“Page” content
+
+🧠 Tip (mental model)
+Think of React Router like this:
+BrowserRouter → (provides routing context)
+       ↓
+     App.jsx
+       ↓
+   Navbar.jsx (Links)
+       ↓
+   Routes → (decide which page to show)
+
+
+Would you like me to make this diagram into a colored visual sketch (image) showing boxes and arrows between the files? That would make it easier to visualize if you’re a visual learner.
