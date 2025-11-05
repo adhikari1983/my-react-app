@@ -2,6 +2,7 @@ import profilePic from '/src/assets/devAvatar.webp'
 
 
 function Card(){
+  
 return(
     <>
       <h1 style={{backgroundColor:"gray"}}>session 2 begins - Card component</h1>

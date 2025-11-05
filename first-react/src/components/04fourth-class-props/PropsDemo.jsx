@@ -11,6 +11,11 @@ function PropsDemo(){
     return(
       <div>
         <h1 style={{backgroundColor:"gray"}}>session 4 begins - Props</h1>
+        <b>
+          props = read-only properties that are shared between components.<br/>
+          A parent components can send data to a child component.<br/>
+          ◄ Component   &nbsp; key = value /►<br/><br/>
+        </b>
             <Student name= "Shiva" age={30} isStudent={true}/>  
             <Student name= "Mahadev" age={1000} isStudent={false}/>
             <Student name= "Shandy" age={35} isStudent={false}/>

@@ -1,6 +1,6 @@
 import Counter from "./Counter";
 
-function DisplayCounter() {
+function CounterDisplay() {
 
     return (
         <>
@@ -12,5 +12,5 @@ function DisplayCounter() {
 
 }
 
-export default DisplayCounter;
+export default CounterDisplay;
 

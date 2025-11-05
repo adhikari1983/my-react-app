@@ -24,26 +24,46 @@ function List(props) {
                                                            {highCalFruit.name}: &nbsp; 
                                                            <b>{highCalFruit.calories}</b></li>) 
      */
+    const itemList = props.items;  
     const category = props.category;
-    const itemList = props.items;
-    const listItems = itemList.map(item => <li key={item.id}> 
-                                                {item.name}: &nbsp;
-                                             <b>{item.calories}</b>
-                                            </li>)
+
+    const listItems = itemList.map(item =>
+        <li key={item.id}>
+            {item.name}: &nbsp; <b>{item.calories}</b>
+        </li>)
     return (
-    <div className="list-group">
-         <h3 className="list-category">{category}</h3>
-        <ol className="list-items">{listItems}</ol>
-    </div>
+        <div className="list-group">
+            <h3 className="list-category">{category}</h3>
+            <ol className="list-items">
+                {listItems} {/* you can't wrap the already-generated list items in another <li> tag.
+                               above online  31-33 the item is already displayed as list:
+                            This comment addresses the common mistake of double-wrapping list items:
+The itemList.map() function already returns an array of fully formed <li> elements.
+Map: Creates an array of <li> elements: [<li>Item 1</li>, <li>Item 2</li>, <li>Item 3</li>]
+Insertion: The {listItems} expression unpacks that array and inserts its contents directly into the 
+parent <ol> element.
+If you were to add an extra <li> around {listItems}, the resulting HTML would be invalid and look 
+like this:
+                        <ol class="list-items">
+                            <li> 
+                                <li>Item 1</li> 
+                                <li>Item 2</li> 
+                                <li>Item 3</li> 
+                            </li> 
+                        </ol>*/}
+            </ol>
+        </div>
     )
 
 }
 
 List.prototype = {
-    category : PropTypes.string,
-    items : PropTypes.arrayOf(PropTypes.shape({id : PropTypes.number,
-                                              name:PropTypes.string,
-                                              calories:PropTypes.number })),
+    category: PropTypes.string,
+    items: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.number,
+        name: PropTypes.string,
+        calories: PropTypes.number
+    })),
 }
 
 export default List

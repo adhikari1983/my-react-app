@@ -1,0 +1,19 @@
+
+.button{
+  width:100px;
+  height:30px;
+  background-color: hsl(200, 100%, 50%);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Use a simple class selector to apply styles directly to the element */
+.info-text {
+    background-color: lightcyan;
+    font-size: 20px;
+    color: hsl(25, 22%, 23%); /* Changed lightbrown to its hex code for consistency */
+    padding: 10px; /* Added padding so the background-color is visible */
+    border-radius: 4px;
+    margin: 10px 0;
+}
