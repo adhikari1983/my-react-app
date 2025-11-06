@@ -2,11 +2,13 @@ import Navbar from './components/NavBar.jsx';
 import { Routes, Route } from 'react-router-dom';
 import DisplayHomePage from './components/01intro-function/DisplayHomePage.jsx';
 import Card from './components/02card-component/Card.jsx';
+import DisplayButtons from './components/03add-css/DisplayButtons.jsx';
 import PropsDemo from './components/04fourth-class-props/PropsDemo.jsx';
 import DisplayList from './components/06render-lists/DisplayList.jsx';
 import ConditionalRendering from './components/05conditional-rendring/ConditionalRendering.jsx';
 import ButtonType from './components/07click-event/ButtonType.jsx';
 import DisplayMyComponent from './components/08reacthook-usestate/DisplayMyComponent.jsx';
+import CounterDisplay from './mini-projects/07counter/CounterDisplay.jsx';
 import DisplayMyComponent01 from './components/09reacthook-onchange/DisplayMyComponent01.jsx';
 import ColorPickerDisplay from './mini-projects/10color-picker/ColorPickerDisplay.jsx';
 import DisplayMyComponent02 from './components/14update-objects-instate/DisplayMyComponent02.jsx';
@@ -26,11 +28,13 @@ function App() {
           <Route path='*' element={<h2>404 - Page Not Found 😒😒😒😒</h2>} /> {/* for any other/random path */}
           <Route path='/' element={<DisplayHomePage/>} />
           <Route path='/card' element={<Card/>} />
+          <Route path='/display-buttons' element={<DisplayButtons/>} />
           <Route path='/props' element={<PropsDemo/>} />
           <Route path='/conditional' element={<ConditionalRendering/>} />
           <Route path='/list' element={<DisplayList/>} />
           <Route path='/button' element={<ButtonType/>} />
           <Route path='/usestate' element={<DisplayMyComponent/>} />
+          <Route path='/counter' element={<CounterDisplay/>} />
           <Route path='/onchange' element={<DisplayMyComponent01/>} />
           <Route path='/colorpicker' element={<ColorPickerDisplay/>} />
           <Route path='/usestate-objects' element={<DisplayMyComponent02/>} />

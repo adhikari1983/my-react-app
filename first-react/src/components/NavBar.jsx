@@ -6,13 +6,13 @@ import { Link } from "react-router-dom";
 const navLinks = [
   { to: "/", name: "Home" },
   { to: "/card", name: "Card" },
-  { to: "/display-buttons", name: "CSS/Buttons" },
+  {to: "/display-buttons", name: "CSS Styling Types" },
   { to: "/props", name: "Props Demo" },
-  { to: "/conditional", name: "Conditional" },
-  { to: "/list", name: "Render Lists" },
+  { to: "/conditional", name: "Conditional Rendering" },
+  { to: "/list", name: "Rendering Lists" },
   { to: "/button", name: "Click Events" },
   { to: "/usestate", name: "useState" },
-  { to: "/counter", name: "MP: Counter" },
+  { to: "/counter", name: "Project : Counter App" },
   { to: "/onchange", name: "OnChange" },
   { to: "/colorpicker", name: "MP: Color Picker" },
   { to: "/usestate-objects", name: "Update Objects" },
@@ -47,6 +47,10 @@ function Navbar() {
     padding: "0.5rem 1rem",
     borderRadius: "6px",
     transition: "all 0.3s ease",
+    //how to write text not to break but on smae line
+    whiteSpace: "nowrap",
+   // overflow: "hidden",
+   // textOverflow: "ellipsis",
   };
 
   const linkHover = (e, hover) => {
