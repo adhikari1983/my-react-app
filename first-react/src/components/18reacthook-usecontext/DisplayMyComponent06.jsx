@@ -24,11 +24,8 @@ function DisplayMyComponent06() {
          2. const value = useContext(MyContext);</p>
       </p>
 
-
-
-
-
       <ComponentA />
+      
     </div>)
 };
 
