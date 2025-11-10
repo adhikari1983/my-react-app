@@ -19,7 +19,22 @@ oc start-build my-react-app --follow
 oc get pods -l app=my-react-app
 oc logs -f pod/<pod-name>
 */
-
+/**
+ * After adding this server.js file, update package.json to include:
+ * {
+  "name": "first-react",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "vite build",
+    "start": "node server.js",
+    "dev": "vite"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  ...
+}
+ */
 const express = require('express');
 const path = require('path');
 
